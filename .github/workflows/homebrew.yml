@@ -16,7 +16,7 @@ jobs:
 
       - name: Update Homebrew Formula
         run: |
-          SHA256=$(curl -L https://github.com/fagom/homebrew-vault/releases/latest/download/vault-mac | shasum -a 256 | awk '{print $1}')
+          SHA256=$(curl -L https://github.com/fagom/vault-cli/releases/latest/download/vault-mac | shasum -a 256 | awk '{print $1}')
           sed -i '' "s|sha256 \".*\"|sha256 \"${SHA256}\"|" Formula/vault.rb
           git add Formula/vault.rb
           git commit -m "Update Homebrew formula for new release"
