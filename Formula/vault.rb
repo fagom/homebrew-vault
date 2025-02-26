@@ -1,4 +1,4 @@
-class CliPass < Formula
+class Vault < Formula
   desc "Command Line Utility for managing passwords"
   homepage "https://github.com/fagom/vault-cli"
   version "refs/heads/release"
